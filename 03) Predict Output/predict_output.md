@@ -44,5 +44,284 @@ int main(){
 Output: 6 5
 ```
 <br>
+
+Code: 4
+```c
+#include<stdio.h>
+int main(){
+    int i = 5;
+    int j = ++i;
+    printf("%d %d", i, j);
+    return 0;
+}
+```
+```c
+Output: 6 6
+```
 <br>
+
+Code: 5
+```c
+#include<stdio.h>
+int main(){
+    int i = 5;
+    printf("%d %d", i++, i);
+    return 0;
+}
+```
+```c
+Output: 5 6
+```
+<br>
+
+Code 6:
+```c
+#include<stdio.h>
+int main(){
+    int i = 1;
+    i = i + 1;
+    printf("%d", i);
+    return 0;
+}
+```
+```c
+Output: 2
+```
+<br>
+
+Code: 7
+```c
+#include<stdio.h>
+int main(){
+    int i = 10;
+    printf("%d", i--);
+    return 0;
+}
+```
+```c
+Output: 10
+```
+<br>
+
+Code: 8
+```c
+#include<stdio.h>
+int main(){
+    int i = 10;
+    int j = i--;
+    printf("%d %d", i, j);
+    return 0;
+}
+```
+```c
+Output: 9 10
+```
+<br>
+
+Code 9:
+```c
+#include<stdio.h>
+int main(){
+    int i = 6;
+    int j = i++ + ++i;
+    printf("%d", j);
+    return 0;
+}
+```
+```c
+Output: 14
+```
+Explanation: The expression is i++ (+) ++i  <br>
+Step 1: i++ uses current value of i.e i=6 then increments to 7 <br>
+Step 2: ++i will increment current value i.e 7 to 8 <br>
+Step 3: Perform j = 6+8 = 14 
+<br>
+<br>
+Code: 10
+```c
+#include<stdio.h>
+int main(){
+    int i = 3;
+    int j = i++ + i++;
+    printf("%d", j);
+    return 0;
+}
+```
+```c
+Output: 7
+```
+<br>
+
+## 2. Operator Precedence
+Priority Order: <br>
+1. ( ) <br>
+2. ++, -- (Pre/Post Increment & Decrement) <br>
+3. *, /, % <br>
+4. +, - <br>
+5. <, <=, >, >= <br>
+6. ==, != <br>
+7. && <br>
+8. || <br>
+9. = <br>
+
+If we face operators with same precedence, then we will solve it from Left to Right. <br>
+
+Code: 11
+```c
+#include<stdio.h>
+int main(){
+    int x = 2 + 3 * 4;
+    printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 14
+```
+<br>
+
+Code: 12
+```c
+#include<stdio.h>
+int main(){
+    int x = 10 - 5 + 2;
+    printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 7
+```
+<br>
+
+Code: 13
+```c
+#include<stdio.h>
+int main(){
+    int x = 2 * 3 + 4 * 5;
+    printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 26
+```
+<br>
+
+Code: 14
+```c
+#include<stdio.h>
+int main(){
+    int x = 20 / 5 * 2;
+    printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 8
+```
+<br>
+
+Code: 15
+```c
+#include<stdio.h>
+int main(){
+    int x = 10 > 5 + 2;
+    printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 1
+```
+<br>
+
+Code: 16
+```c
+#include<stdio.h>
+int main(){
+    int x = 10 > 5 && 2 < 3;
+    printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 1
+```
+<br>
+
+Code: 17
+```c
+#include<stdio.h>
+int main(){
+   int x = 5 + 3 > 6 && 2 * 2 == 4;
+   printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 1
+```
+<br>
+
+Code: 18
+```c
+#include<stdio.h>
+int main(){
+   int x = 5 + (3 > 6 && 2 * 2) == 4;
+   printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 0
+```
+<br>
+
+Code: 19
+```c
+#include<stdio.h>
+int main(){
+   int x = 10 || 0 && 5;
+   printf("%d", x);
+    return 0;
+}
+```
+```c
+Ouput: 1
+```
+Note: Logical AND (&&) and Logical OR (||) are same as AND gate and OR gate that we studied in Digital electronics. So, it follows same truth table. <br>
+
+Code: 20
+```c
+#include<stdio.h>
+int main(){
+   int x = (10 || 0) && 5;
+   printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 1
+```
+<br>
+
+Code: 21
+```c
+#include<stdio.h>
+int main(){
+   int x = 5 + (2 > 3 ? 10 : 20);
+   printf("%d", x);
+    return 0;
+}
+```
+```c
+Output: 25
+```
+<br>
+
+
+
+
+
 
