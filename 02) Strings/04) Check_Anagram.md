@@ -2,13 +2,13 @@
 ```c
 #include<stdio.h>
 int main(){
-  char s1[26];
-  char s2[26];
+  char s1[100];
+  char s2[100];
   
   gets(s1);
   gets(s2);
   
-  int freq[26]={0};
+  int freq[256]={0};
   for(int i=0; s1[i]!='\0'; i++){
     if(s1[i] !='\n'){
       freq[s1[i]]++;
@@ -19,7 +19,7 @@ int main(){
       freq[s2[i]]--;
     }
   }
-  for(int i=0;i<26;i++){
+  for(int i=0;i<256;i++){
     if(freq[i] != 0){
       printf("Not an Anagram");
     }
