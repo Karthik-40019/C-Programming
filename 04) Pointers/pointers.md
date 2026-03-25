@@ -49,7 +49,8 @@ Output:
 👉 `int*` declares a pointer that holds the memory address of an int type variable.
 
 <p align="center">
-  <img src="images/pointer.png" width="400">
+  <img src="images/pointer.png" width="400"><br>
+  <b>Pointer Storing the address</b>
 </p>
 <br>
 
