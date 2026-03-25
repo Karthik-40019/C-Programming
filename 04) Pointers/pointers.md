@@ -26,7 +26,7 @@ int main(){
 ```
 Output: 0x7ffef4883dd4
 ```
-👉 %p is a format specifier specifically used to print memory addresses, usually represented in hexadecimal form. <br>
+👉 `%p` is a format specifier specifically used to print memory addresses, usually represented in hexadecimal form. <br>
 Note: The address that is there above will change everytime, as computer allocates a random address everytime. <br>
 
 
@@ -46,7 +46,7 @@ Output:
 0x7ffeca38529c
 0x7ffeca38529c
 ```
-👉 int* declares a pointer that holds the memory address of an int type variable.
+👉 `int*` declares a pointer that holds the memory address of an int type variable.
 
 <p align="center">
   <img src="images/pointer.png" width="400">
