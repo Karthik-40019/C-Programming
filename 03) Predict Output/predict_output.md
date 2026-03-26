@@ -402,6 +402,71 @@ Output: 10
 
 Code: 27
 ```c
+#include <stdio.h>
+int main()
+{
+  int a = 10;
+  int *p = &a;
+  int **q = &p;
+  printf("%d", **q);
+}
+```
+```
+Output: 10
+```
+`**q` is two levels dereference <br>
+ `q`  -> Stores address of `p` <br>
+`*q`  -> gives p <br>
+`**q` -> gives value of a <br>
+
+<br>
+
+Code: 28
+```c
+#include <stdio.h>
+int main()
+{
+  int a = 5;
+  int *p = &a;
+  printf("%d ", (*p)++);
+  printf("%d", a);
+}
+```
+```
+Output: 5 6
+```
+<br>
+
+Code: 29
+```c
+#include <stdio.h>
+int main()
+{
+  int a = 5;
+  int *p = &a;
+  printf("%d ", ++(*p));
+  printf("%d", a);
+}
+```
+```
+Output: 6 6
+```
+<br>
+
+Code: 30
+```c
+#include <stdio.h>
+int main()
+{
+  int a = 5;
+  int *p = &a;
+  printf("%d ", (*p)+5);
+}
+```
+```
+Output: 10
+```
+<br>
 
 
 
