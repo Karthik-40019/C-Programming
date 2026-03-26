@@ -320,6 +320,88 @@ Output: 25
 ```
 <br>
 
+## 3. Pointers (Basic)
+Code: 22
+```c
+#include <stdio.h>
+int main()
+{
+  int a = 10;
+  int *p = &a;
+  printf("%d", *p);
+}
+```
+```
+Output: 10
+```
+<br>
+
+Code: 23
+```c
+#include <stdio.h>
+int main()
+{
+  int a = 10;
+  int *p = &a;
+  *p = 20;
+  printf("%d", a);
+}
+```
+```
+Output: 20
+```
+<br>
+
+Code: 24
+```c
+#include <stdio.h>
+int main()
+{
+  int a = 10;
+  int *p = &a;
+  printf("%p %d", p, *p);
+}
+```
+```
+Output: (Some address) 10
+```
+<br>
+
+Code: 25
+```c
+#include <stdio.h>
+int main()
+{
+  int a = 10;
+  int *p = &a;
+  int *q = p;
+  *q = 60;
+  printf("%d", a);
+}
+```
+```
+Ouput: 60
+```
+<br>
+
+Code: 26
+```c
+#include <stdio.h>
+int main()
+{
+  int a = 5, b = 10;
+  int *p = &a;
+  p = &b;
+  printf("%d", *p);
+}
+```
+```
+Output: 10
+```
+<br>
+
+Code: 27
+```c
 
 
 
