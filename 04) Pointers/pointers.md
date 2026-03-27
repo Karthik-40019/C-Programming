@@ -187,3 +187,62 @@ int main(){
 ```
 Output: 15
 ```
+<br>
+
+## Reverse an Array
+```c
+#include<stdio.h>
+void revArray(int n,int* arr){
+  for(int i=n-1;i>=0;i--){
+    printf("%d ",*(arr + i));
+  }
+}
+int main(){
+  int n;
+  scanf("%d",&n);
+  int arr[n];
+  for(int i=0;i<n;i++){
+    scanf("%d",&arr[i]);
+  }
+  revArray(n,arr);
+  return 0;
+}
+```
+```c
+Input:           Output:
+5                8 9 32 11 10
+10 11 32 9 8
+```
+<br>
+
+## Find Max in array
+```c
+#include<stdio.h>
+int findMax(int *arr,int n){
+  int max=*arr;
+  for(int i=0;i<n;i++){
+    if(max < *(arr+i)){
+      max = *(arr+i);
+    }
+  }
+  return max;
+}
+int main(){
+  int n;
+  scanf("%d",&n);
+  int arr[n];
+  for(int i=0;i<n;i++){
+    scanf("%d",&arr[i]);
+  }
+  printf("%d",findMax(arr,n));
+  return 0;
+}
+```
+```c
+Input:           Output:
+5                40
+10 11 40 9 8
+```
+<br>
+
+ 
