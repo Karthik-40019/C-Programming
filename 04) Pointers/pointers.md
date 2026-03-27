@@ -147,3 +147,43 @@ Initial Value of a: 25
 Modified Value of a: 30
 ```
 So, here `**y` will traverse back twice and modifies the value of `a` to `30`
+<br>
+<br>
+
+## Sum of 2 numbers
+```c
+#include<stdio.h>
+int sum(int* x,int* y){
+  return *x + *y;
+}
+int main(){
+  int a = 10;
+  int b = 20;
+  printf("%d ",sum(&a,&b));
+  return 0;
+}
+```
+```
+Output: 30
+```
+<br>
+
+## Sum of array of elements
+```c
+#include<stdio.h>
+int sumOfArray(int* arr){
+  int sum = 0;
+  for(int i=0;i<5;i++){
+    sum += *(arr + i); // same as arr[i]
+  }
+  return sum;
+}
+int main(){
+  int arr[]={1,2,3,4,5};
+  printf("%d", sumOfArray(arr));
+  return 0;
+}
+```
+```
+Output: 15
+```
