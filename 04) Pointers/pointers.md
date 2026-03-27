@@ -100,3 +100,50 @@ Value of b: 2
   <img src="images/swap.png" width="700"><br>
   <b>Pointer Value Update Representation</b>
 </p>
+
+## Double Pointer
+A double pointer in C is a pointer that stores the address of another pointer. <br>
+```c
+int **ptr;
+```
+Code on Double Pointer
+```c
+#include<stdio.h>
+int main(){
+  int a = 25;
+  int* x = &a;
+  int** y = &x;
+  printf("%d ", a);
+  printf("%d ", *x);
+  printf("%d", **y);
+  return 0;
+}
+```
+```
+Output: 25 25 25
+```
+<p align="center">
+  <img src="images/double_Pointer.png" width="700"><br>
+  <b>Double Pointer representation</b>
+</p>
+<br>
+
+## Modifying a Value Using Double Pointer
+```c
+#include<stdio.h>
+int main(){
+  int a = 25;
+  int* x = &a;
+  int** y = &x;
+  printf("Initial Value of a: %d\n", a);
+  **y = 30;
+  printf("Modified Value of a: %d", a);
+  return 0;
+}
+```
+```
+Output:
+Initial Value of a: 25
+Modified Value of a: 30
+```
+So, here `**y` will traverse back twice and modifies the value of `a` to `30`
