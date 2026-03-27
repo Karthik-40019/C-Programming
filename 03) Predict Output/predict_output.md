@@ -468,6 +468,70 @@ Output: 10
 ```
 <br>
 
+Code: 31
+```c
+#include<stdio.h>
+int main(){
+  int a = 10;
+  int *p = &a;
+  printf("%d", *(p + 1));
+  return 0;
+}
+```
+```
+Output: Undefined Behaviour
+```
+<br>
+
+Code: 32
+```c
+#include<stdio.h>
+int main(){
+  int arr[] = {1, 2, 3};
+  int *p = arr;
+  printf("%d", *(p + 2));
+  return 0;
+}
+```
+```
+Output: 3
+```
+<br>
+
+Code: 33
+```c
+#include<stdio.h>
+int main(){
+  int arr[] = {10,20,30};
+  int* p = arr;
+  p++;
+  printf("%d", *p);
+  return 0;
+}
+```
+```
+Output: 20
+```
+Initial pointer will be at 0 and it goes to 1 after `p++`
+<br>
+<br>
+Code: 34
+```c
+#include<stdio.h>
+int main(){
+  int arr[] = {10,20,30};
+  int* p = arr;
+  printf("%d", *p++);
+  return 0;
+}
+```
+```
+Output: 10
+```
+According to the operator precedence rule, Post increment will first use the value then it will increment it.
+
+
+
 
 
 
